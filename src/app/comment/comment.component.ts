@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { CommentsFormComponent } from "../components/comments-form/comments-form.component";
 
 @Component({
   selector: 'app-comment',
   standalone: true,
-  imports: [],
+  imports: [CommentsFormComponent],
   templateUrl: './comment.component.html',
   styleUrl: './comment.component.scss',
 })

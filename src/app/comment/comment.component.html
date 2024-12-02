@@ -58,9 +58,15 @@
       <dd class="text-xs text-gray-500">3 minute</dd>
     </div>
   </dl>
-  @if (isExpanded()) {
+  @if (isReplying()) {
   <section class="nested-comments">
-    <div class="text-xl">This shows nested comments</div>
+    <div class="text-xl">Type your reply...</div>
+    <app-comments-form></app-comments-form>
+  </section>
+  } @if (isExpanded()) {
+  <section class="nested-comments">
+    <app-comment></app-comment>
+    <app-comment></app-comment>
   </section>
   }
 </article>
